@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070f1d">
+<title>Retro Architecture Visualizer — Demonstração pública | Ciência Atratora</title>
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<main class="shell">
+  <header class="header"><div><div class="eyebrow">CIÊNCIA ATRATORA <span class="rule">/</span> LABORATÓRIO VISUAL</div><h1>Retro <em>Architecture</em> Visualizer <span class="version">MVP 0.1</span></h1><p>Do movimento na tela às instruções, memória, arquitetura e matemática.</p></div><span class="chip">100% LOCAL • SEM ENVIO DE ARQUIVOS</span></header>
+  <div class="status" style="margin:0 0 14px;border-left-color:#35d9ff">DEMONSTRAÇÃO PÚBLICA · Protótipo didático. O repositório de desenvolvimento permanece privado. O código do painel entregue ao navegador é público; nenhum dado enviado é transmitido a servidor.</div>
+  <section class="workspace" aria-label="Painel de visualização"><canvas id="stage" width="1920" height="1080" aria-label="Tela com gameplay, código Assembly, gráfico de velocidade e hardware"></canvas></section>
+  <section class="transport"><button id="play" class="primary">▶ Reproduzir</button><button id="back" title="Quadro anterior">◀ 1 quadro</button><button id="next" title="Próximo quadro">1 quadro ▶</button><span class="clock" id="clock">00:00.000 / 00:08.000</span><input type="range" id="seek" min="0" max="1000" value="0" aria-label="Linha do tempo"><button id="snap">Salvar PNG</button><button id="record" class="accent">● Gravar 10s WEBM</button></section>
+  <section class="inputs"><div class="upload"><label for="video">1 · Gameplay MP4/WEBM</label><input id="video" type="file" accept="video/mp4,video/webm,video/*"/><small>Vídeo local; não é enviado a servidor.</small></div><div class="upload"><label for="csv">2 · Telemetria CSV</label><input id="csv" type="file" accept=".csv,text/csv"/><small>frame,x,y,vx,vy</small></div><div class="upload"><label for="trace">3 · Rastreamento JSONL</label><input id="trace" type="file" accept=".jsonl,.ndjson,.txt"/><small>frame,pc,asm,a,x_reg,y_reg,cycles</small></div><div class="settings"><label>FPS da captura <input id="fps" type="number" min="1" max="240" value="60"></label><label>Offset (quadros) <input id="offset" type="number" min="-100000" max="100000" value="0"></label><button id="reset">Restaurar demo</button></div></section>
+  <aside id="status" class="status">DEMONSTRAÇÃO: dados e jogo simulados. Importe arquivos reais para trabalhar com capturas de emulador.</aside>
+  <footer><span>Sem ROMs, sem código proprietário e sem componentes do console real nesta demonstração.</span><span>Para uso científico, valide o alinhamento entre gameplay e rastreamento.</span></footer>
+</main>
+<video id="sourceVideo" preload="metadata" playsinline style="display:none"></video>
+<script src="src/core.js"></script><script src="src/app.js"></script>
+</body></html>
