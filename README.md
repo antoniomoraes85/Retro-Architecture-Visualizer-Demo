@@ -10,9 +10,16 @@ Demonstração didática para visualizar, em uma única tela, a relação concei
 - modelo matemático discreto do movimento;
 - blocos conceituais da arquitetura de um console.
 
-## Acessar
+## Ativar a publicação (uma única vez)
 
-Depois que o GitHub Actions concluir a publicação, o site estará disponível em:
+O workflow já está configurado, mas a primeira execução encontrou o Pages ainda não habilitado. Faça esta configuração no GitHub:
+
+1. Abra **Settings → Pages** neste repositório.
+2. Em **Build and deployment → Source**, selecione **GitHub Actions**.
+3. Volte à aba **Actions** e abra a execução com falha chamada **Deploy public demo to GitHub Pages**.
+4. Clique em **Re-run jobs → Re-run all jobs**.
+
+Depois que a execução terminar com sucesso, o site estará disponível em:
 
 https://antoniomoraes85.github.io/Retro-Architecture-Visualizer-Demo/
 
